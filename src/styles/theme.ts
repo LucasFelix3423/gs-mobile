@@ -50,7 +50,7 @@ export const theme = {
     caption: {
       fontSize: 12,
       color: '#9CA3AF',
-    }
+    },
   },
   shadows: {
     soft: {
@@ -66,6 +66,6 @@ export const theme = {
       shadowOpacity: 0.1,
       shadowRadius: 12,
       elevation: 6,
-    }
-  }
+    },
+  },
 };

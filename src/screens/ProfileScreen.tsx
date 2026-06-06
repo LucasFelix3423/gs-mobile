@@ -15,11 +15,11 @@ export default function ProfileScreen({ navigation }: Props) {
   const handleLogout = () => {
     Alert.alert('Sair', 'Tem certeza que deseja desconectar sua conta?', [
       { text: 'Cancelar', style: 'cancel' },
-      { 
-        text: 'Sair', 
+      {
+        text: 'Sair',
         style: 'destructive',
-        onPress: () => navigation.navigate('Dashboard') 
-      }
+        onPress: () => navigation.navigate('Dashboard'),
+      },
     ]);
   };
 
@@ -38,38 +38,62 @@ export default function ProfileScreen({ navigation }: Props) {
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Geral</Text>
-        
+
         <TouchableOpacity style={styles.optionRow}>
           <View style={styles.optionIconContainer}>
-            <MaterialCommunityIcons name="account-edit-outline" size={24} color={theme.colors.primary} />
+            <MaterialCommunityIcons
+              name="account-edit-outline"
+              size={24}
+              color={theme.colors.primary}
+            />
           </View>
           <Text style={styles.optionText}>Editar Perfil</Text>
-          <MaterialCommunityIcons name="chevron-right" size={24} color={theme.colors.textSecondary} />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={24}
+            color={theme.colors.textSecondary}
+          />
         </TouchableOpacity>
-        
+
         <TouchableOpacity style={styles.optionRow}>
           <View style={styles.optionIconContainer}>
             <MaterialCommunityIcons name="bell-outline" size={24} color={theme.colors.secondary} />
           </View>
           <Text style={styles.optionText}>Notificações</Text>
-          <MaterialCommunityIcons name="chevron-right" size={24} color={theme.colors.textSecondary} />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={24}
+            color={theme.colors.textSecondary}
+          />
         </TouchableOpacity>
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Aplicativo</Text>
-        
+
         <TouchableOpacity style={styles.optionRow}>
           <View style={styles.optionIconContainer}>
-            <MaterialCommunityIcons name="help-circle-outline" size={24} color={theme.colors.textSecondary} />
+            <MaterialCommunityIcons
+              name="help-circle-outline"
+              size={24}
+              color={theme.colors.textSecondary}
+            />
           </View>
           <Text style={styles.optionText}>Central de Ajuda</Text>
-          <MaterialCommunityIcons name="chevron-right" size={24} color={theme.colors.textSecondary} />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={24}
+            color={theme.colors.textSecondary}
+          />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.optionRow}>
           <View style={styles.optionIconContainer}>
-            <MaterialCommunityIcons name="information-outline" size={24} color={theme.colors.textSecondary} />
+            <MaterialCommunityIcons
+              name="information-outline"
+              size={24}
+              color={theme.colors.textSecondary}
+            />
           </View>
           <Text style={styles.optionText}>Sobre o AgroGestão</Text>
           <Text style={styles.versionText}>v1.0.0</Text>
@@ -77,10 +101,15 @@ export default function ProfileScreen({ navigation }: Props) {
       </View>
 
       <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
-        <MaterialCommunityIcons name="logout" size={20} color={theme.colors.error} style={{ marginRight: 8 }} />
+        <MaterialCommunityIcons
+          name="logout"
+          size={20}
+          color={theme.colors.error}
+          style={{ marginRight: 8 }}
+        />
         <Text style={styles.logoutButtonText}>Sair da Conta</Text>
       </TouchableOpacity>
-      
+
       <View style={{ height: 40 }} />
     </ScrollView>
   );
@@ -179,5 +208,5 @@ const styles = StyleSheet.create({
     color: theme.colors.error,
     fontSize: 16,
     fontWeight: 'bold',
-  }
+  },
 });

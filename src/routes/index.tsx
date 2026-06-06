@@ -15,7 +15,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
+      <Stack.Navigator
         initialRouteName="Dashboard"
         screenOptions={{
           headerStyle: { backgroundColor: theme.colors.primary },
@@ -23,10 +23,26 @@ export default function Routes() {
           headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
-        <Stack.Screen name="Dashboard" component={DashboardScreen} options={{ title: 'AgroGestão' }} />
-        <Stack.Screen name="PlantingsList" component={PlantingsListScreen} options={{ title: 'Meus Plantios' }} />
-        <Stack.Screen name="PlantingForm" component={PlantingFormScreen} options={{ title: 'Formulário de Plantio' }} />
-        <Stack.Screen name="PlantingDetails" component={PlantingDetailsScreen} options={{ title: 'Detalhes da Área' }} />
+        <Stack.Screen
+          name="Dashboard"
+          component={DashboardScreen}
+          options={{ title: 'AgroGestão' }}
+        />
+        <Stack.Screen
+          name="PlantingsList"
+          component={PlantingsListScreen}
+          options={{ title: 'Meus Plantios' }}
+        />
+        <Stack.Screen
+          name="PlantingForm"
+          component={PlantingFormScreen}
+          options={{ title: 'Formulário de Plantio' }}
+        />
+        <Stack.Screen
+          name="PlantingDetails"
+          component={PlantingDetailsScreen}
+          options={{ title: 'Detalhes da Área' }}
+        />
         <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Meu Perfil' }} />
       </Stack.Navigator>
     </NavigationContainer>

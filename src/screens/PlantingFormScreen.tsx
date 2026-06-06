@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, ActivityIndicator, Alert, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator,
+  Alert,
+  ScrollView,
+} from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -9,7 +18,10 @@ import { theme } from '../styles/theme';
 import { RootStackParamList } from '../types';
 
 type PlantingFormScreenRouteProp = RouteProp<RootStackParamList, 'PlantingForm'>;
-type PlantingFormScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'PlantingForm'>;
+type PlantingFormScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'PlantingForm'
+>;
 
 interface Props {
   route: PlantingFormScreenRouteProp;
@@ -43,7 +55,7 @@ export default function PlantingFormScreen({ route, navigation }: Props) {
     const data = {
       cropName,
       areaSize: parseFloat(areaSize),
-      status
+      status,
     };
 
     try {
@@ -68,8 +80,13 @@ export default function PlantingFormScreen({ route, navigation }: Props) {
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Cultura (ex: Milho, Soja)*</Text>
           <View style={styles.inputWrapper}>
-            <MaterialCommunityIcons name="sprout" size={20} color={theme.colors.textSecondary} style={styles.inputIcon} />
-            <TextInput 
+            <MaterialCommunityIcons
+              name="sprout"
+              size={20}
+              color={theme.colors.textSecondary}
+              style={styles.inputIcon}
+            />
+            <TextInput
               style={styles.input}
               placeholder="Digite o nome da cultura"
               placeholderTextColor={theme.colors.textSecondary}
@@ -82,8 +99,13 @@ export default function PlantingFormScreen({ route, navigation }: Props) {
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Tamanho da Área (Hectares)*</Text>
           <View style={styles.inputWrapper}>
-            <MaterialCommunityIcons name="texture-box" size={20} color={theme.colors.textSecondary} style={styles.inputIcon} />
-            <TextInput 
+            <MaterialCommunityIcons
+              name="texture-box"
+              size={20}
+              color={theme.colors.textSecondary}
+              style={styles.inputIcon}
+            />
+            <TextInput
               style={styles.input}
               placeholder="Ex: 5.5"
               placeholderTextColor={theme.colors.textSecondary}
@@ -97,8 +119,13 @@ export default function PlantingFormScreen({ route, navigation }: Props) {
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Status do Plantio</Text>
           <View style={styles.inputWrapper}>
-            <MaterialCommunityIcons name="list-status" size={20} color={theme.colors.textSecondary} style={styles.inputIcon} />
-            <TextInput 
+            <MaterialCommunityIcons
+              name="list-status"
+              size={20}
+              color={theme.colors.textSecondary}
+              style={styles.inputIcon}
+            />
+            <TextInput
               style={styles.input}
               placeholder="Ex: Plantado, Colhido, Preparo"
               placeholderTextColor={theme.colors.textSecondary}
@@ -109,13 +136,13 @@ export default function PlantingFormScreen({ route, navigation }: Props) {
         </View>
       </View>
 
-      <TouchableOpacity 
-        activeOpacity={0.8}
-        onPress={handleSave}
-        disabled={loading}
-      >
+      <TouchableOpacity activeOpacity={0.8} onPress={handleSave} disabled={loading}>
         <LinearGradient
-          colors={loading ? [theme.colors.textSecondary, theme.colors.border] : [theme.colors.primary, theme.colors.primaryLight]}
+          colors={
+            loading
+              ? [theme.colors.textSecondary, theme.colors.border]
+              : [theme.colors.primary, theme.colors.primaryLight]
+          }
           style={styles.saveButton}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
@@ -124,8 +151,15 @@ export default function PlantingFormScreen({ route, navigation }: Props) {
             <ActivityIndicator color={theme.colors.surface} />
           ) : (
             <>
-              <MaterialCommunityIcons name="check-circle-outline" size={24} color={theme.colors.surface} style={{ marginRight: 8 }} />
-              <Text style={styles.saveButtonText}>{isEditing ? 'Atualizar Registro' : 'Salvar Plantio'}</Text>
+              <MaterialCommunityIcons
+                name="check-circle-outline"
+                size={24}
+                color={theme.colors.surface}
+                style={{ marginRight: 8 }}
+              />
+              <Text style={styles.saveButtonText}>
+                {isEditing ? 'Atualizar Registro' : 'Salvar Plantio'}
+              </Text>
             </>
           )}
         </LinearGradient>
@@ -185,5 +219,5 @@ const styles = StyleSheet.create({
     color: theme.colors.surface,
     fontSize: 18,
     fontWeight: 'bold',
-  }
+  },
 });

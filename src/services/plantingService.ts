@@ -50,5 +50,5 @@ export const plantingService = {
       console.error('Erro:', error);
       throw error;
     }
-  }
+  },
 };

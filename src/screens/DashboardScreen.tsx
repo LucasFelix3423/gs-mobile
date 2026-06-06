@@ -27,7 +27,7 @@ export default function DashboardScreen({ navigation }: Props) {
 
       <View style={styles.content}>
         <View style={styles.cardContainer}>
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.card}
             activeOpacity={0.8}
             onPress={() => navigation.navigate('PlantingsList')}
@@ -39,37 +39,57 @@ export default function DashboardScreen({ navigation }: Props) {
               <Text style={styles.cardTitle}>Meus Plantios</Text>
               <Text style={styles.cardDesc}>Visualizar e gerenciar áreas cadastradas</Text>
             </View>
-            <MaterialCommunityIcons name="chevron-right" size={24} color={theme.colors.textSecondary} />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color={theme.colors.textSecondary}
+            />
           </TouchableOpacity>
 
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.card}
             activeOpacity={0.8}
             onPress={() => navigation.navigate('PlantingForm')}
           >
             <View style={[styles.iconContainer, { backgroundColor: '#FFF3E0' }]}>
-              <MaterialCommunityIcons name="plus-circle-outline" size={32} color={theme.colors.secondary} />
+              <MaterialCommunityIcons
+                name="plus-circle-outline"
+                size={32}
+                color={theme.colors.secondary}
+              />
             </View>
             <View style={styles.cardTextContainer}>
               <Text style={styles.cardTitle}>Novo Plantio</Text>
               <Text style={styles.cardDesc}>Cadastrar uma nova área de safra</Text>
             </View>
-            <MaterialCommunityIcons name="chevron-right" size={24} color={theme.colors.textSecondary} />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color={theme.colors.textSecondary}
+            />
           </TouchableOpacity>
-          
-          <TouchableOpacity 
+
+          <TouchableOpacity
             style={styles.card}
             activeOpacity={0.8}
             onPress={() => navigation.navigate('Profile')}
           >
             <View style={[styles.iconContainer, { backgroundColor: '#F3F4F6' }]}>
-              <MaterialCommunityIcons name="account-circle-outline" size={32} color={theme.colors.textSecondary} />
+              <MaterialCommunityIcons
+                name="account-circle-outline"
+                size={32}
+                color={theme.colors.textSecondary}
+              />
             </View>
             <View style={styles.cardTextContainer}>
               <Text style={styles.cardTitle}>Meu Perfil</Text>
               <Text style={styles.cardDesc}>Configurações e dados da sua conta</Text>
             </View>
-            <MaterialCommunityIcons name="chevron-right" size={24} color={theme.colors.textSecondary} />
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color={theme.colors.textSecondary}
+            />
           </TouchableOpacity>
         </View>
       </View>
@@ -133,5 +153,5 @@ const styles = StyleSheet.create({
   cardDesc: {
     ...theme.typography.body,
     marginTop: 2,
-  }
+  },
 });

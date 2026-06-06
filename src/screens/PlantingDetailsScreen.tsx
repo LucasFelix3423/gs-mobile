@@ -8,7 +8,10 @@ import { theme } from '../styles/theme';
 import { RootStackParamList } from '../types';
 
 type PlantingDetailsScreenRouteProp = RouteProp<RootStackParamList, 'PlantingDetails'>;
-type PlantingDetailsScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'PlantingDetails'>;
+type PlantingDetailsScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'PlantingDetails'
+>;
 
 interface Props {
   route: PlantingDetailsScreenRouteProp;
@@ -46,7 +49,7 @@ export default function PlantingDetailsScreen({ route, navigation }: Props) {
       <View style={styles.content}>
         <View style={styles.card}>
           <Text style={styles.sectionTitle}>Informações da Área</Text>
-          
+
           <View style={styles.detailRow}>
             <View style={styles.detailIcon}>
               <MaterialCommunityIcons name="texture-box" size={24} color={theme.colors.secondary} />
@@ -61,7 +64,11 @@ export default function PlantingDetailsScreen({ route, navigation }: Props) {
 
           <View style={styles.detailRow}>
             <View style={styles.detailIcon}>
-              <MaterialCommunityIcons name="identifier" size={24} color={theme.colors.textSecondary} />
+              <MaterialCommunityIcons
+                name="identifier"
+                size={24}
+                color={theme.colors.textSecondary}
+              />
             </View>
             <View>
               <Text style={styles.detailLabel}>ID no Sistema</Text>
@@ -70,12 +77,17 @@ export default function PlantingDetailsScreen({ route, navigation }: Props) {
           </View>
         </View>
 
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.actionButton}
           activeOpacity={0.8}
           onPress={() => navigation.navigate('PlantingForm', { planting })}
         >
-          <MaterialCommunityIcons name="pencil" size={20} color={theme.colors.surface} style={{ marginRight: 8 }} />
+          <MaterialCommunityIcons
+            name="pencil"
+            size={20}
+            color={theme.colors.surface}
+            style={{ marginRight: 8 }}
+          />
           <Text style={styles.actionButtonText}>Editar este registro</Text>
         </TouchableOpacity>
       </View>
@@ -190,5 +202,5 @@ const styles = StyleSheet.create({
   backButtonText: {
     fontWeight: 'bold',
     color: theme.colors.text,
-  }
+  },
 });
