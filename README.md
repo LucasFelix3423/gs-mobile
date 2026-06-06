@@ -8,9 +8,6 @@ O aplicativo integra com uma API REST externa para realizar o CRUD de dados, nã
 ## Integrantes do Grupo
 * Lucas Felix VASSILIADES - RM: 97677
 
-## Vídeo de Apresentação
-[Link do YouTube aqui](https://www.youtube.com/)
-
 ## Como rodar o projeto
 1. Clone o repositório
 2. Rode `npm install` na pasta do projeto
