@@ -6,10 +6,7 @@ O AgroGestão é um aplicativo desenvolvido em React Native (Expo) focado no ger
 O aplicativo integra com uma API REST externa para realizar o CRUD de dados, não dependendo de armazenamento local no dispositivo para persistência. 
 
 ## Integrantes do Grupo
-* Nome Completo 1 - RM: 12345
-* Nome Completo 2 - RM: 12346
-* Nome Completo 3 - RM: 12347
-* Nome Completo 4 - RM: 12348
+* Lucas Felix VASSILIADES - RM: 97677
 
 ## Vídeo de Apresentação
 [Link do YouTube aqui](https://www.youtube.com/)
